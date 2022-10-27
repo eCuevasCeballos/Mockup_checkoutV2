@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Screen</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-title">GameStore</h1>
+        <div class="progress-bar">
+            <div class="circle--1"></div>
+            <div class="circle--2"></div>
+            <div class="progress-bar-green"></div>
+            <div class="progress-bar-white"></div>
+        </div>
+        <div class="card-image">
+            <div class="card">
+                <div class="company">Company Card</div>
+                <div class="cardholder-name">Client's Name</div>
+                <div class="card-number">xxxx-xxxx-xxxx-xxxx</div>
+                <div class="exp-text">Expiration Date</div>
+                <div class="exp-date">MM/YY</div>
+                <div class="chip-container">
+                  <div class="chip"></div>
+                </div>
+              </div>
+        </div>
+        <div class="card-information">
+            <h2 class="card-number-h2">Card number</h2>
+            <label for="card-number" class="label"><p class="label-content">1</p> 
+                <input class ="card-number" id="card-number" type="number" inputmode="numeric" pattern="[0-9]" autocomplete="cc-number" maxlength="16" placeholder="xxxx xxxx xxxx xxxx">
+            </label>
+            <h2 class="cardholder-h2">Cardholder Name</h2>
+            <label for="cardholder-name" class="label"><p class="label-content">1</p> 
+               <input type="text" class ="cardholder-name" id="cardholder-name" placeholder="Insert cardholder's name here"> 
+            </label>
+            <h2 class="date-header">Expire Date</h2>
+            <label for="expire-date"><p class="label-content">1</p> 
+                <input type="text" onfocus="(this.type='month')" id="expire-date" onblur="if(!this.value) this.type='text'" class ="expire-date" placeholder ="MM/YY">
+            </label>
+            <h2 class="cvc-header">CVV / CVC</h2>
+            <label for="cvc"><p class="label-content">1</p> 
+               <input type="password" class ="cvc" placeholder="CVC" maxlength="4" id="cvc"> 
+            </label>
+            <label class="save-info">
+                <input type="checkbox" class="save-checkbox"><p class="save-text">Save card information</p>
+            </label>
+            <button class="pay-btn">Pay Now</button>
+        </div>
+        <script src="main.js"></script>
+</body>
+</html>
